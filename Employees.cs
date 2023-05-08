@@ -101,8 +101,8 @@ namespace LeaveMS
                     string Phone = EmpPhoneTb.Text;
                     string Pass = PasswordTb.Text;
                     string Add = AddTb.Text;
-                    string Query = "update EmployeeTbl set EmpName = '{0}', EmpGen = '{1}', EmpPhone = '{2}', EmpPass = '{3}', EmAdd = '{4}  where EmpId = {5}'";
-                    Query = string.Format(Query, Name, Gender, Phone, Pass, Add);
+                    string Query = "update EmployeeTbl set EmpName = '{0}', EmpGen = '{1}', EmpPhone = '{2}', EmpPass = '{3}', EmAdd = '{4}'  where EmpId = {5}";
+                    Query = string.Format(Query, Name, Gender, Phone, Pass, Add, Key);
                     Con.SetData(Query);
                     ShowEmployees();
                     MessageBox.Show("Данные о сотруднике обновлены");
@@ -145,6 +145,28 @@ namespace LeaveMS
             {
                 MessageBox.Show(Ex.Message);
             }
+          
+        }
+
+        private void CategoryLbl_Click(object sender, EventArgs e)
+        {
+            Categories Obj = new Categories();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Leaves Obj = new Leaves();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
         }
     }
 }

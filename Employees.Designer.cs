@@ -38,7 +38,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.CategoryLbl = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -81,7 +81,7 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.CategoryLbl);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -122,6 +122,7 @@
             this.label13.Size = new System.Drawing.Size(72, 25);
             this.label13.TabIndex = 28;
             this.label13.Text = "Выйти";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox5
             // 
@@ -133,15 +134,16 @@
             this.pictureBox5.TabIndex = 29;
             this.pictureBox5.TabStop = false;
             // 
-            // label12
+            // CategoryLbl
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(76, 458);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 25);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Категории";
+            this.CategoryLbl.AutoSize = true;
+            this.CategoryLbl.ForeColor = System.Drawing.Color.White;
+            this.CategoryLbl.Location = new System.Drawing.Point(76, 458);
+            this.CategoryLbl.Name = "CategoryLbl";
+            this.CategoryLbl.Size = new System.Drawing.Size(109, 25);
+            this.CategoryLbl.TabIndex = 26;
+            this.CategoryLbl.Text = "Категории";
+            this.CategoryLbl.Click += new System.EventHandler(this.CategoryLbl_Click);
             // 
             // pictureBox4
             // 
@@ -162,6 +164,7 @@
             this.label11.Size = new System.Drawing.Size(89, 25);
             this.label11.TabIndex = 24;
             this.label11.Text = "Отпуска";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // pictureBox2
             // 
@@ -511,7 +514,7 @@
         private PictureBox pictureBox6;
         private Label label13;
         private PictureBox pictureBox5;
-        private Label label12;
+        private Label CategoryLbl;
         private PictureBox pictureBox4;
         private Label label11;
         private PictureBox pictureBox2;

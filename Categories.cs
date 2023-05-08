@@ -112,5 +112,26 @@ namespace LeaveMS
                 MessageBox.Show(Ex.Message);
             }
         }
+
+        private void EmpLbl_Click(object sender, EventArgs e)
+        {
+            Employees Obj = new Employees();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void LeaveLbl_Click(object sender, EventArgs e)
+        {
+            Leaves Obj = new Leaves();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

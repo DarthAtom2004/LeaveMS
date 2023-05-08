@@ -28,7 +28,11 @@ namespace LeaveMS
             LeaveList.DataSource = Con.GetData(Query);
         }
 
-       
-
+        private void LogoutLbl_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

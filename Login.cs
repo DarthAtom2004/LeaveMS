@@ -72,5 +72,10 @@ namespace LeaveMS
                 }
             }
         }
+
+        private void CloseLbl_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

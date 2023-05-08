@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.CloseLbl = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,14 +42,14 @@
             this.LoginBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseLbl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(2)))), ((int)(((byte)(82)))));
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.CloseLbl);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -58,15 +58,16 @@
             this.panel1.Size = new System.Drawing.Size(582, 133);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox2
+            // CloseLbl
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(540, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 26);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.CloseLbl.Image = ((System.Drawing.Image)(resources.GetObject("CloseLbl.Image")));
+            this.CloseLbl.Location = new System.Drawing.Point(540, 12);
+            this.CloseLbl.Name = "CloseLbl";
+            this.CloseLbl.Size = new System.Drawing.Size(30, 26);
+            this.CloseLbl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CloseLbl.TabIndex = 8;
+            this.CloseLbl.TabStop = false;
+            this.CloseLbl.Click += new System.EventHandler(this.CloseLbl_Click);
             // 
             // label1
             // 
@@ -180,7 +181,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseLbl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,7 +199,7 @@
         private TextBox PasswordTb;
         private Label label3;
         private TextBox UNameTbl;
-        private PictureBox pictureBox2;
+        private PictureBox CloseLbl;
         private PictureBox pictureBox1;
     }
 }

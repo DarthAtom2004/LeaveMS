@@ -41,11 +41,11 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.CategoryLbl = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.LeaveLbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.EmpLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label3 = new System.Windows.Forms.Label();
@@ -103,11 +103,11 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.CategoryLbl);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.LeaveLbl);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.EmpLbl);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -144,6 +144,7 @@
             this.label13.Size = new System.Drawing.Size(72, 25);
             this.label13.TabIndex = 28;
             this.label13.Text = "Выйти";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox5
             // 
@@ -155,19 +156,18 @@
             this.pictureBox5.TabIndex = 29;
             this.pictureBox5.TabStop = false;
             // 
-            // label12
+            // CategoryLbl
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(76, 458);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 25);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Категории";
+            this.CategoryLbl.AutoSize = true;
+            this.CategoryLbl.ForeColor = System.Drawing.Color.White;
+            this.CategoryLbl.Location = new System.Drawing.Point(76, 458);
+            this.CategoryLbl.Name = "CategoryLbl";
+            this.CategoryLbl.Size = new System.Drawing.Size(109, 25);
+            this.CategoryLbl.TabIndex = 26;
+            this.CategoryLbl.Text = "Категории";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(13, 436);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(46, 47);
@@ -175,19 +175,19 @@
             this.pictureBox4.TabIndex = 27;
             this.pictureBox4.TabStop = false;
             // 
-            // label11
+            // LeaveLbl
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(76, 382);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 25);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Отпуска";
+            this.LeaveLbl.AutoSize = true;
+            this.LeaveLbl.ForeColor = System.Drawing.Color.White;
+            this.LeaveLbl.Location = new System.Drawing.Point(76, 382);
+            this.LeaveLbl.Name = "LeaveLbl";
+            this.LeaveLbl.Size = new System.Drawing.Size(89, 25);
+            this.LeaveLbl.TabIndex = 24;
+            this.LeaveLbl.Text = "Отпуска";
+            this.LeaveLbl.Click += new System.EventHandler(this.LeaveLbl_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(13, 360);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(46, 47);
@@ -195,19 +195,19 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
-            // label9
+            // EmpLbl
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(76, 312);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 25);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Сотрудники";
+            this.EmpLbl.AutoSize = true;
+            this.EmpLbl.ForeColor = System.Drawing.Color.White;
+            this.EmpLbl.Location = new System.Drawing.Point(76, 312);
+            this.EmpLbl.Name = "EmpLbl";
+            this.EmpLbl.Size = new System.Drawing.Size(123, 25);
+            this.EmpLbl.TabIndex = 21;
+            this.EmpLbl.Text = "Сотрудники";
+            this.EmpLbl.Click += new System.EventHandler(this.EmpLbl_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(13, 290);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(46, 47);
@@ -401,11 +401,11 @@
         private PictureBox pictureBox6;
         private Label label13;
         private PictureBox pictureBox5;
-        private Label label12;
+        private Label CategoryLbl;
         private PictureBox pictureBox4;
-        private Label label11;
+        private Label LeaveLbl;
         private PictureBox pictureBox2;
-        private Label label9;
+        private Label EmpLbl;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Label label3;
